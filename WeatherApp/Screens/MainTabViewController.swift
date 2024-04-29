@@ -14,8 +14,8 @@ class MainTabViewController: UITabBarController{
         super.viewDidLoad()
         
         setUpViewControllers()
-        tabBar.backgroundColor = .white
-        tabBar.selectedImageTintColor = .black
+        tabBar.backgroundColor = .black
+        tabBar.selectedImageTintColor = .white
         tabBar.unselectedItemTintColor = .systemGray
         
     }
@@ -26,6 +26,7 @@ class MainTabViewController: UITabBarController{
         let options = generateViewControllers(title: "Options", image:UIImage(named: "options") , vc: OptionsViewController())
     
         setViewControllers([map,main,options], animated: true)
+        
         
     }
     

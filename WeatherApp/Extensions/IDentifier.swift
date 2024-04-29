@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+extension TimeWeatherCollecionView{
+    static var id: String{
+        String(describing: self)
+    }
+}
+
+extension TenDaysWeatherView{
+    static var id: String{
+        String(describing: self)
+    }
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct DataModel{
+    let city: String
+    let num: String
+    let state: String
+    let hl: String
+}

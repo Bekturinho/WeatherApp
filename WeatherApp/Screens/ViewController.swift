@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var delegate: DelegateForAny?
+    
    private lazy var actualWeatherInfoView: ActualWeatherView = {
        ActualWeatherView()
    }()
@@ -21,18 +23,31 @@ class ViewController: UIViewController {
         TenDaysWeatherView()
         
     }()
+ 
+ 
+    private lazy var myLocView: MyLocationView = {
+        MyLocationView()
+        
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "rain") ?? UIImage())
+        view.backgroundColor = UIColor(patternImage: UIImage(named: backImage) ?? UIImage())
         setUpSubViews()
+        
+     
+        delegate?.updateData()
+        
     }
+    
+ 
     
     private func setUpSubViews(){
         addAllSubs()
         makeContraits()
+       
     }
     
 
@@ -74,6 +89,12 @@ class ViewController: UIViewController {
   
     }
     
+   
+  
+    
+        
+  
 
 }
+
 

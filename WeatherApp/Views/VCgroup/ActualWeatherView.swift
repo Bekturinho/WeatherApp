@@ -12,7 +12,7 @@ class ActualWeatherView: UIView{
     
     private lazy var cityNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Chicago, IL"
+        label.text = cityPub
         label.font = UIFont.systemFont(ofSize: 30)
         label.textColor = .white
         return label
@@ -20,7 +20,7 @@ class ActualWeatherView: UIView{
     
     private lazy var numberOfWeatherLabel: UILabel = {
         let label = UILabel()
-        label.text = "21°"
+        label.text =  numPub
         label.font = UIFont.systemFont(ofSize: 80)
         label.textColor = .white
         return label
@@ -28,7 +28,7 @@ class ActualWeatherView: UIView{
     
     private lazy var stateOfWeatherLabel: UILabel = {
         let label = UILabel()
-        label.text = "Partly Cloudy"
+        label.text = statePub
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = .white
         return label
@@ -36,7 +36,7 @@ class ActualWeatherView: UIView{
     
     private lazy var HLLabel: UILabel = {
         let label = UILabel()
-        label.text = "H:29° L:15°"
+        label.text = hlPub
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .white
         return label
@@ -80,4 +80,15 @@ class ActualWeatherView: UIView{
         ])
         
     }
+    
+    func changeInfo(city: String, number: String, state: String, hl: String){
+        cityNameLabel.text = city
+        numberOfWeatherLabel.text = number
+        stateOfWeatherLabel.text = state
+        HLLabel.text = hl
+        
+        print([cityNameLabel.text, numberOfWeatherLabel.text,stateOfWeatherLabel.text, HLLabel.text])
+    }
 }
+
+
